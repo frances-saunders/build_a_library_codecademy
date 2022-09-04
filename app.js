@@ -1,3 +1,6 @@
+//This script fulfills the project reqs for "Build A Library" in Codecademy
+
+//sets Media parent nad parent props
 class Media {
   constructor(title) {
     this._title = title;
@@ -38,6 +41,7 @@ class Media {
   
 }
 
+//sets new book child of media
 class Book extends Media {
   constructor(title, author, pages) {
     super(title);
@@ -54,6 +58,8 @@ class Book extends Media {
   }
 }
 
+
+//sets new movie child of media
 class Movie extends Media {
   constructor(director, title, runTime) {
     super(title);
@@ -70,6 +76,7 @@ class Movie extends Media {
   }
 }
 
+//displays media titles, check out status, and avg ratings
 const historyOfEverything = new Book("A Short History of Nearly Everything", "Bill Bryson", 544);
 historyOfEverything.toggleCheckOutStatus();
 console.log("Title of Media: " + historyOfEverything.title);
